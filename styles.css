@@ -999,9 +999,90 @@ body {
   .cart-panel { width: 100vw; right: -100vw; }
 }
 
-@media (max-width: 580px) {
+/* ══════════════════════════════════
+   RESPONSIVIDAD & MEDIA QUERIES
+══════════════════════════════════ */
+
+/* Tablets (iPad) y pantallas medianas */
+@media (max-width: 1024px) {
+  .hero-content h1 { font-size: 48px; }
+  .hero-content { padding: 0 20px; }
+  .productos-grid { grid-template-columns: repeat(2, 1fr); }
+  .pago-grid { grid-template-columns: repeat(2, 1fr); }
+  .topbar { padding: 15px 30px; }
+  .nav { gap: 20px; }
+}
+
+/* Móviles grandes y Tablets pequeñas */
+@media (max-width: 768px) {
+  .hero { padding: 60px 20px; }
+  .hero-content h1 { font-size: 38px; }
+  .hero-content p { font-size: 1rem; }
+  
+  .topbar {
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+    padding: 15px;
+    position: relative;
+  }
+  
+  .nav {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+
   .productos-grid { grid-template-columns: 1fr; }
   .pago-grid { grid-template-columns: 1fr; }
-  .hero-left h1 { font-size: 36px; }
-  .nav { gap: 16px; }
+  
+  .aviso-deposito { padding: 15px 20px; font-size: 0.85rem; }
+  .footer-inner { flex-direction: column; gap: 30px; text-align: center; }
+  .footer-links { align-items: center; }
 }
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .splash-logo { font-size: 2.22rem; letter-spacing: 2px; }
+  .splash-bar { width: 160px; }
+  
+  .hero-content h1 { font-size: 32px; }
+  .hero-cta { width: 100%; text-align: center; }
+  
+  .acordeon-header { padding: 15px; font-size: 0.95rem; }
+  .producto-card { padding: 20px; }
+  
+  /* Arreglo para selectores en móviles */
+  .prod-qty {
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* ─── Corrección de Menús Desplegables & Scroll ─── */
+.acordeon-body {
+  overflow-y: visible; /* Permite que los dropdowns salgan del contenedor si es necesario */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease;
+}
+
+.acordeon-item.open .acordeon-body {
+  max-height: 2000px; /* Suficiente para el grid de productos */
+  overflow: visible; /* Crucial para los <select> */
+}
+
+/* Asegurar que el scroll no se bloquee por overlays */
+.cart-overlay {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Evitar zoom automático en inputs de iOS */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select, textarea, input {
+    font-size: 16px !important;
+  }
+}
+
