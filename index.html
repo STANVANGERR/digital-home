@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Imprenta digital profesional en Madrid y Barcelona – flyers, tarjetas, banners, sublimación y más.">
+  <meta name="author" content="DIGITAL HOME">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>DIGITAL HOME – Imprenta Digital Madrid &amp; Barcelona</title>
+</head>
+<body>
+
+<!-- ═══════════════ SPLASH / LOADING ═══════════════ -->
+<div class="splash" id="splash">
+  <div class="splash-content">
+    <span class="splash-logo">DIGITAL HOME</span>
+    <p class="splash-sub">Imprenta Digital Profesional</p>
+    <div class="splash-bar">
+      <div class="splash-bar-fill" id="splashBar"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="topbar">
+  <div class="logo">DIGITAL HOME</div>
+  <nav class="nav">
+    <a href="#servicios">Servicios</a>
+    <a href="#pedido">Mi Pedido</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <!-- Carrito flotante en navbar -->
+  <button class="cart-btn" id="cartToggle" aria-label="Ver carrito">
+    🛒 <span class="cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Imprimimos<br><span>tus ideas</span></h1>
+    <p>Impresión profesional para marcas que quieren destacar.<br>
+      <strong>Madrid · Barcelona</strong> — Entrega en <em>8 días hábiles</em>.</p>
+    <a href="#servicios" class="hero-cta">Ver servicios ↓</a>
+  </div>
+</section>
+
+<!-- ═══════════════ AVISO DEPÓSITO ═══════════════ -->
+<div class="aviso-deposito">
+  ⚡ <strong>Se requiere el 50 % del importe como señal para iniciar la producción.</strong>
+  Tiempo de entrega: <strong>8 días hábiles</strong> desde confirmación del pago.
+</div>
+
+<!-- ═══════════════ SERVICIOS (ACORDEÓN) ═══════════════ -->
+<section class="servicios-section" id="servicios">
+  <div class="section-header">
+    <h2>Nuestros Servicios</h2>
+    <p>Haz clic en cada categoría para ver opciones y añadir al carrito</p>
+  </div>
+
+  <div class="acordeon-wrapper">
+
+    <!-- ─── FLYERS ─── -->
+    <div class="acordeon-item">
+      <button class="acordeon-header" onclick="toggleAcordeon(this)">
+        <span class="cat-icon">🖨️</span>
+        <span>Flyers &amp; Folletos</span>
+        <span class="acordeon-arrow">▼</span>
+      </button>
+      <div class="acordeon-body">
+        <p class="cat-desc">Impresión a todo color en papel couché. Mínimo 100 uds.</p>
+        <div class="productos-grid">
+          <div class="producto-card" data-nombre="Flyer A7 (100 uds)" data-precio="18">
+            <div class="prod-header">A7 <small>(74×105 mm)</small></div>
+            <div class="prod-precio">desde <strong>18 €</strong> / 100 uds</div>
+            <select class="prod-qty" id="qty-flyer-a7">
+              <option value="100">100 uds — 18 €</option>
+              <option value="250">250 uds — 35 €</option>
+              <option value="500">500 uds — 58 €</option>
+              <option value="1000">1.000 uds — 90 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Flyer A6 (100 uds)" data-precio="22">
+            <div class="prod-header">A6 <small>(105×148 mm)</small></div>
+            <div class="prod-precio">desde <strong>22 €</strong> / 100 uds</div>
+            <select class="prod-qty" id="qty-flyer-a6">
+              <option value="100">100 uds — 22 €</option>
+              <option value="250">250 uds — 42 €</option>
+              <option value="500">500 uds — 68 €</option>
+              <option value="1000">1.000 uds — 105 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Flyer A5 (100 uds)" data-precio="30">
+            <div class="prod-header">A5 <small>(148×210 mm)</small></div>
+            <div class="prod-precio">desde <strong>30 €</strong> / 100 uds</div>
+            <select class="prod-qty" id="qty-flyer-a5">
+              <option value="100">100 uds — 30 €</option>
+              <option value="250">250 uds — 58 €</option>
+              <option value="500">500 uds — 88 €</option>
+              <option value="1000">1.000 uds — 135 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Flyer A4 (100 uds)" data-precio="40">
+            <div class="prod-header">A4 <small>(210×297 mm)</small></div>
+            <div class="prod-precio">desde <strong>40 €</strong> / 100 uds</div>
+            <select class="prod-qty" id="qty-flyer-a4">
+              <option value="100">100 uds — 40 €</option>
+              <option value="250">250 uds — 75 €</option>
+              <option value="500">500 uds — 115 €</option>
+              <option value="1000">1.000 uds — 170 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Flyer A3 (100 uds)" data-precio="60">
+            <div class="prod-header">A3 <small>(297×420 mm)</small></div>
+            <div class="prod-precio">desde <strong>60 €</strong> / 100 uds</div>
+            <select class="prod-qty" id="qty-flyer-a3">
+              <option value="100">100 uds — 60 €</option>
+              <option value="250">250 uds — 115 €</option>
+              <option value="500">500 uds — 180 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Flyer A2 (50 uds)" data-precio="75">
+            <div class="prod-header">A2 <small>(420×594 mm)</small></div>
+            <div class="prod-precio">desde <strong>75 €</strong> / 50 uds</div>
+            <select class="prod-qty" id="qty-flyer-a2">
+              <option value="50">50 uds — 75 €</option>
+              <option value="100">100 uds — 130 €</option>
+              <option value="250">250 uds — 285 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── TARJETAS DE PRESENTACIÓN ─── -->
+    <div class="acordeon-item">
+      <button class="acordeon-header" onclick="toggleAcordeon(this)">
+        <span class="cat-icon">💼</span>
+        <span>Tarjetas de Presentación</span>
+        <span class="acordeon-arrow">▼</span>
+      </button>
+      <div class="acordeon-body">
+        <p class="cat-desc">Papel premier 350 g, acabado mate o brillo. Mínimo 1.000 uds.</p>
+        <div class="productos-grid">
+          <div class="producto-card" data-nombre="Tarjetas Estándar (1.000 uds)" data-precio="45">
+            <div class="prod-header">Estándar <small>85×54 mm</small></div>
+            <div class="prod-precio">desde <strong>45 €</strong> / 1.000 uds</div>
+            <select class="prod-qty">
+              <option value="1000">1.000 uds — 45 €</option>
+              <option value="2000">2.000 uds — 75 €</option>
+              <option value="3000">3.000 uds — 100 €</option>
+              <option value="5000">5.000 uds — 150 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Tarjetas Plastificadas (1.000 uds)" data-precio="60">
+            <div class="prod-header">Plastificadas <small>mate/brillo</small></div>
+            <div class="prod-precio">desde <strong>60 €</strong> / 1.000 uds</div>
+            <select class="prod-qty">
+              <option value="1000">1.000 uds — 60 €</option>
+              <option value="2000">2.000 uds — 100 €</option>
+              <option value="3000">3.000 uds — 135 €</option>
+              <option value="5000">5.000 uds — 195 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Tarjetas Luxury (1.000 uds)" data-precio="85">
+            <div class="prod-header">Luxury <small>soft-touch + stamping</small></div>
+            <div class="prod-precio">desde <strong>85 €</strong> / 1.000 uds</div>
+            <select class="prod-qty">
+              <option value="1000">1.000 uds — 85 €</option>
+              <option value="2000">2.000 uds — 145 €</option>
+              <option value="5000">5.000 uds — 290 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── MENÚS / CARTAS ─── -->
+    <div class="acordeon-item">
+      <button class="acordeon-header" onclick="toggleAcordeon(this)">
+        <span class="cat-icon">🍽️</span>
+        <span>Menús &amp; Cartas para Restaurantes</span>
+        <span class="acordeon-arrow">▼</span>
+      </button>
+      <div class="acordeon-body">
+        <p class="cat-desc">Impresión A4/A3 plastificada, grapada o encuadernada. Mínimo 10 uds.</p>
+        <div class="productos-grid">
+          <div class="producto-card" data-nombre="Menú A4 plastificado (50 uds)" data-precio="80">
+            <div class="prod-header">Menú A4 <small>plastificado, doble cara</small></div>
+            <div class="prod-precio">desde <strong>80 €</strong> / 50 uds</div>
+            <select class="prod-qty">
+              <option value="50">50 uds — 80 €</option>
+              <option value="100">100 uds — 145 €</option>
+              <option value="200">200 uds — 260 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Carta encuadernada A4 (10 uds)" data-precio="65">
+            <div class="prod-header">Carta Encuadernada <small>A4, 8 páginas</small></div>
+            <div class="prod-precio">desde <strong>65 €</strong> / 10 uds</div>
+            <select class="prod-qty">
+              <option value="10">10 uds — 65 €</option>
+              <option value="25">25 uds — 140 €</option>
+              <option value="50">50 uds — 250 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Carta pizarra (1 ud)" data-precio="28">
+            <div class="prod-header">Carta Pizarra <small>A3, plastificada</small></div>
+            <div class="prod-precio">desde <strong>28 €</strong> / ud</div>
+            <select class="prod-qty">
+              <option value="1">1 ud — 28 €</option>
+              <option value="5">5 uds — 120 €</option>
+              <option value="10">10 uds — 220 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── BANNERS ─── -->
+    <div class="acordeon-item">
+      <button class="acordeon-header" onclick="toggleAcordeon(this)">
+        <span class="cat-icon">🎌</span>
+        <span>Banners &amp; Roll-ups</span>
+        <span class="acordeon-arrow">▼</span>
+      </button>
+      <div class="acordeon-body">
+        <p class="cat-desc">Impresión en lona o vinilo de alta resolución. Incluye ojales/soporte.</p>
+        <div class="productos-grid">
+          <div class="producto-card" data-nombre="Banner lona 100×200 cm" data-precio="38">
+            <div class="prod-header">Lona <small>100×200 cm</small></div>
+            <div class="prod-precio"><strong>38 €</strong> / ud</div>
+            <select class="prod-qty">
+              <option value="1">1 ud — 38 €</option>
+              <option value="3">3 uds — 108 €</option>
+              <option value="5">5 uds — 170 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Banner lona 150×300 cm" data-precio="65">
+            <div class="prod-header">Lona <small>150×300 cm</small></div>
+            <div class="prod-precio"><strong>65 €</strong> / ud</div>
+            <select class="prod-qty">
+              <option value="1">1 ud — 65 €</option>
+              <option value="3">3 uds — 180 €</option>
+              <option value="5">5 uds — 290 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Roll-up 85×200 cm + soporte" data-precio="75">
+            <div class="prod-header">Roll-up <small>85×200 cm + soporte</small></div>
+            <div class="prod-precio"><strong>75 €</strong> / ud</div>
+            <select class="prod-qty">
+              <option value="1">1 ud — 75 €</option>
+              <option value="2">2 uds — 140 €</option>
+              <option value="5">5 uds — 330 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── REVISTAS ─── -->
+    <div class="acordeon-item">
+      <button class="acordeon-header" onclick="toggleAcordeon(this)">
+        <span class="cat-icon">📖</span>
+        <span>Revistas &amp; Catálogos</span>
+        <span class="acordeon-arrow">▼</span>
+      </button>
+      <div class="acordeon-body">
+        <p class="cat-desc">Impresión digital de alta calidad, grapada o perfecta encuadernación.</p>
+        <div class="productos-grid">
+          <div class="producto-card" data-nombre="Revista A4 grapada 16 pag (100 uds)" data-precio="195">
+            <div class="prod-header">Revista A4 grapada <small>16 págs</small></div>
+            <div class="prod-precio">desde <strong>195 €</strong> / 100 uds</div>
+            <select class="prod-qty">
+              <option value="100">100 uds — 195 €</option>
+              <option value="250">250 uds — 420 €</option>
+              <option value="500">500 uds — 750 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Catálogo A4 encuadernado 24 pag (50 uds)" data-precio="180">
+            <div class="prod-header">Catálogo A4 <small>24 págs, tapa blanda</small></div>
+            <div class="prod-precio">desde <strong>180 €</strong> / 50 uds</div>
+            <select class="prod-qty">
+              <option value="50">50 uds — 180 €</option>
+              <option value="100">100 uds — 310 €</option>
+              <option value="250">250 uds — 650 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SUBLIMACIÓN ─── -->
+    <div class="acordeon-item">
+      <button class="acordeon-header" onclick="toggleAcordeon(this)">
+        <span class="cat-icon">👕</span>
+        <span>Sublimación de Camisas &amp; Polos</span>
+        <span class="acordeon-arrow">▼</span>
+      </button>
+      <div class="acordeon-body">
+        <p class="cat-desc">Sublimación full color + full body. Mínimo <strong>12 uds</strong>. Máxima definición, lavado resistente.</p>
+        <div class="productos-grid">
+          <div class="producto-card" data-nombre="Camisa sublimada (12 uds)" data-precio="264">
+            <div class="prod-header">Camisa Sublimada <small>poliéster 100%, talla a elegir</small></div>
+            <div class="prod-precio"><strong>22 € / ud</strong> (mín. 12 uds)</div>
+            <select class="prod-qty">
+              <option value="12">12 uds — 264 €</option>
+              <option value="24">24 uds — 528 €</option>
+              <option value="48">48 uds — 1.056 €</option>
+              <option value="100">100 uds — 2.200 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Polo sublimado (12 uds)" data-precio="288">
+            <div class="prod-header">Polo Sublimado <small>con cuello, poliéster</small></div>
+            <div class="prod-precio"><strong>24 € / ud</strong> (mín. 12 uds)</div>
+            <select class="prod-qty">
+              <option value="12">12 uds — 288 €</option>
+              <option value="24">24 uds — 576 €</option>
+              <option value="48">48 uds — 1.152 €</option>
+              <option value="100">100 uds — 2.400 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── DTF TEXTIL ─── -->
+    <div class="acordeon-item">
+      <button class="acordeon-header" onclick="toggleAcordeon(this)">
+        <span class="cat-icon">🎨</span>
+        <span>DTF Textil (Transfer Digital)</span>
+        <span class="acordeon-arrow">▼</span>
+      </button>
+      <div class="acordeon-body">
+        <p class="cat-desc">DTF compatible con cualquier tejido (algodón, poliéster, mezclas). Mínimo <strong>12 uds</strong>. +8 € sobre precio base.</p>
+        <div class="productos-grid">
+          <div class="producto-card" data-nombre="Camisa DTF (12 uds)" data-precio="360">
+            <div class="prod-header">Camisa DTF <small>cualquier tela</small></div>
+            <div class="prod-precio"><strong>30 € / ud</strong> (22 € + 8 € DTF)</div>
+            <select class="prod-qty">
+              <option value="12">12 uds — 360 €</option>
+              <option value="24">24 uds — 720 €</option>
+              <option value="48">48 uds — 1.440 €</option>
+              <option value="100">100 uds — 3.000 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Polo DTF (12 uds)" data-precio="384">
+            <div class="prod-header">Polo DTF <small>cualquier tela</small></div>
+            <div class="prod-precio"><strong>32 € / ud</strong> (24 € + 8 € DTF)</div>
+            <select class="prod-qty">
+              <option value="12">12 uds — 384 €</option>
+              <option value="24">24 uds — 768 €</option>
+              <option value="48">48 uds — 1.536 €</option>
+              <option value="100">100 uds — 3.200 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+          <div class="producto-card" data-nombre="Parche / Transfer DTF (50 uds)" data-precio="90">
+            <div class="prod-header">Parche / Transfer <small>hasta A4, film recortado</small></div>
+            <div class="prod-precio"><strong>90 €</strong> / 50 uds (1.8 € / ud)</div>
+            <select class="prod-qty">
+              <option value="50">50 uds — 90 €</option>
+              <option value="100">100 uds — 160 €</option>
+              <option value="250">250 uds — 350 €</option>
+            </select>
+            <button class="btn-add" onclick="addToCart(this)">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /acordeon-wrapper -->
+</section>
+
+<!-- ═══════════════ CARRITO LATERAL ═══════════════ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-panel-header">
+    <h3>🛒 Mi Pedido</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Tu carrito está vacío.<br>Explora nuestros servicios y añade productos.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      Subtotal: <strong id="cartSubtotal">0,00 €</strong>
+    </div>
+    <div class="cart-deposito-nota">
+      💡 Señal a pagar ahora (50 %): <strong id="cartDeposito">0,00 €</strong>
+    </div>
+    <button class="btn-checkout" onclick="scrollToPago()">Ir a Pagar →</button>
+  </div>
+</aside>
+
+<!-- ═══════════════ PASARELA DE PAGO ═══════════════ -->
+<section class="pago-section" id="pedido">
+  <div class="section-header">
+    <h2>💳 Forma de Pago</h2>
+    <p>Elige tu método preferido. Recuerda: se abona el <strong>50 % como señal</strong> para iniciar.</p>
+  </div>
+
+  <div class="pago-grid">
+
+    <!-- Bizum -->
+    <div class="pago-card">
+      <div class="pago-icon">📱</div>
+      <h3>Bizum</h3>
+      <p>Envía el importe al <strong>+34 674 913 178</strong> con concepto <em>"Tu nombre + servicio"</em>.</p>
+      <span class="pago-badge">Solo España</span>
+    </div>
+
+    <!-- Transferencia -->
+    <div class="pago-card">
+      <div class="pago-icon">🏦</div>
+      <h3>Transferencia Bancaria</h3>
+      <p>IBAN: <strong>BE27 9675 0811 6173</strong><br>
+         Concepto: <em>Tu nombre + pedido</em></p>
+      <span class="pago-badge">Sin comisión</span>
+    </div>
+
+    <!-- PayPal -->
+    <div class="pago-card pago-card--paypal">
+      <div class="pago-icon">🅿️</div>
+      <h3>PayPal</h3>
+      <p>Pago seguro a través de PayPal. Se aplica comisión del <strong>3,4 %</strong> del proveedor.</p>
+       <p> Solo para paises Sur Americanos </p>
+      <a href="https://www.paypal.me/digitalhome" target="_blank" class="btn-paypal" rel="noopener">Pagar con PayPal</a>
+     
+    </div>
+
+    <!-- Efectivo -->
+    <div class="pago-card">
+      <div class="pago-icon">💵</div>
+      <h3>Efectivo</h3>
+      <p>Entrega en mano con servicio a domicilio en <strong>Madrid y Barcelona</strong>. Concertar entrega por correo.</p>
+      <span class="pago-badge pago-badge--green">Delivery</span>
+    </div>
+
+  </div>
+
+  <!-- Resumen pedido visible -->
+  <div class="resumen-pedido" id="resumenPedido">
+    <h3>📋 Resumen de tu pedido</h3>
+    <ul id="resumenLista"><li class="resumen-vacio">Aún no has añadido productos.</li></ul>
+    <div class="resumen-total">
+      Total estimado: <strong id="resumenTotal">0,00 €</strong><br>
+      <span>Señal (50 %): <strong id="resumenDeposito">0,00 €</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACTO ═══════════════ -->
+<section class="contacto-section" id="contacto">
+  <div class="section-header">
+    <h2>📩 Contacto &amp; Consultas</h2>
+    <p>Rellena el formulario y te respondemos en menos de 24 h</p>
+  </div>
+
+  <form class="contact-form" id="contactForm" onsubmit="enviarConsulta(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="cf-nombre">Nombre completo *</label>
+        <input type="text" id="cf-nombre" name="nombre" placeholder="Juan García López" required>
+      </div>
+      <div class="form-group">
+        <label for="cf-doc">Nº Documento (DNI/NIE/Pasaporte) *</label>
+        <input type="text" id="cf-doc" name="documento" placeholder="12345678A" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="cf-email">Correo electrónico *</label>
+        <input type="email" id="cf-email" name="email" placeholder="juan@ejemplo.com" required>
+      </div>
+      <div class="form-group">
+        <label for="cf-telefono">Teléfono</label>
+        <input type="tel" id="cf-telefono" name="telefono" placeholder="+34 600 000 000">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cf-direccion">Dirección de envío / Ciudad *</label>
+      <input type="text" id="cf-direccion" name="direccion" placeholder="Calle Gran Vía 10, 28013 Madrid" required>
+    </div>
+    <div class="form-group">
+      <label for="cf-mensaje">Cuéntanos tu proyecto o consulta *</label>
+      <textarea id="cf-mensaje" name="mensaje" rows="5" placeholder="Necesito 500 flyers A5 para mi restaurante en Barcelona, fecha límite …" required></textarea>
+    </div>
+    <div class="form-footer-row">
+      <p class="form-nota">📧 Se enviará a <strong>acunacaritho@gmail.com</strong></p>
+      <button type="submit" class="btn-enviar">Enviar consulta ✉️</button>
+    </div>
+    <div class="form-success" id="formSuccess">
+      ✅ ¡Mensaje enviado! Te contactaremos en menos de 24 horas.
+    </div>
+  </form>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">DIGITAL HOME</span>
+      <p>Impresión digital profesional<br>Madrid &amp; Barcelona</p>
+    </div>
+    <div class="footer-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#pedido">Mi Pedido</a>
+      <a href="#contacto">Contacto</a>
+      <a href="mailto:acunacaritho@gmail.com">acunacaritho@gmail.com</a>
+    </div>
+    <div class="footer-info">
+      <p>⏱ Entrega: <strong>8 días hábiles</strong></p>
+      <p>💰 Señal: <strong>50 % del total</strong></p>
+      <p>📍 Madrid · Barcelona</p>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 Digital Home. Todos los derechos reservados.</div>
+</footer>
+
+<!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+<script>
+  // ── Acordeón ──────────────────────────────
+  function toggleAcordeon(btn) {
+    const item = btn.closest('.acordeon-item');
+    const isOpen = item.classList.contains('open');
+    // cierra todos
+    document.querySelectorAll('.acordeon-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ── Carrito ───────────────────────────────
+  let carrito = [];
+
+  function addToCart(btn) {
+    const card = btn.closest('.producto-card');
+    const nombre = card.dataset.nombre;
+    const select = card.querySelector('select');
+    const opcionTexto = select.options[select.selectedIndex].text;
+    // Extraer precio de la opción elegida (último número)
+    const match = opcionTexto.match(/[\d.,]+\s*€$/);
+    const precioStr = match ? match[0].replace('.', '').replace(',', '.').replace('€', '').trim() : card.dataset.precio;
+    const precio = parseFloat(precioStr) || parseFloat(card.dataset.precio);
+
+    // ¿Ya existe?
+    const existing = carrito.find(i => i.nombre === nombre && i.opcion === opcionTexto);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      carrito.push({ nombre, opcion: opcionTexto, precio, qty: 1 });
+    }
+    renderCart();
+    openCart();
+    animateCartBtn();
+  }
+
+  function removeFromCart(idx) {
+    carrito.splice(idx, 1);
+    renderCart();
+  }
+
+  function renderCart() {
+    const list = document.getElementById('cartItems');
+    const count = document.getElementById('cartCount');
+    const subtotalEl = document.getElementById('cartSubtotal');
+    const depositoEl = document.getElementById('cartDeposito');
+
+    count.textContent = carrito.reduce((s, i) => s + i.qty, 0);
+
+    if (carrito.length === 0) {
+      list.innerHTML = '<p class="cart-empty">Tu carrito está vacío.<br>Explora nuestros servicios y añade productos.</p>';
+      subtotalEl.textContent = '0,00 €';
+      depositoEl.textContent = '0,00 €';
+      renderResumen();
+      return;
+    }
+
+    let html = '';
+    let total = 0;
+    carrito.forEach((item, i) => {
+      const lineTotal = item.precio * item.qty;
+      total += lineTotal;
+      html += `<div class="cart-item">
+        <div class="ci-info">
+          <span class="ci-name">${item.nombre}</span>
+          <span class="ci-opt">${item.opcion}</span>
+        </div>
+        <div class="ci-right">
+          <span class="ci-price">${lineTotal.toFixed(2).replace('.', ',')} €</span>
+          <button class="ci-rm" onclick="removeFromCart(${i})">✕</button>
+        </div>
+      </div>`;
+    });
+    list.innerHTML = html;
+    subtotalEl.textContent = total.toFixed(2).replace('.', ',') + ' €';
+    depositoEl.textContent = (total / 2).toFixed(2).replace('.', ',') + ' €';
+    renderResumen();
+  }
+
+  function renderResumen() {
+    const lista = document.getElementById('resumenLista');
+    const totalEl = document.getElementById('resumenTotal');
+    const depEl = document.getElementById('resumenDeposito');
+    if (carrito.length === 0) {
+      lista.innerHTML = '<li class="resumen-vacio">Aún no has añadido productos.</li>';
+      totalEl.textContent = '0,00 €';
+      depEl.textContent = '0,00 €';
+      return;
+    }
+    let total = 0;
+    let html = '';
+    carrito.forEach(item => {
+      const lt = item.precio * item.qty;
+      total += lt;
+      const qtyLabel = item.qty > 1 ? ` (x${item.qty})` : '';
+      html += `<li>
+          <div class="resumen-item-info">
+            <span class="resumen-item-title">${item.nombre}</span>
+            <small class="resumen-item-opt">${item.opcion}${qtyLabel}</small>
+          </div>
+          <strong>${lt.toFixed(2).replace('.', ',')} €</strong>
+        </li>`;
+    });
+    lista.innerHTML = html;
+    totalEl.textContent = total.toFixed(2).replace('.', ',') + ' €';
+    depEl.textContent = (total / 2).toFixed(2).replace('.', ',') + ' €';
+  }
+
+  function openCart() {
+    document.getElementById('cartPanel').classList.add('open');
+    document.getElementById('cartOverlay').classList.add('show');
+  }
+  function closeCart() {
+    document.getElementById('cartPanel').classList.remove('open');
+    document.getElementById('cartOverlay').classList.remove('show');
+  }
+  document.getElementById('cartToggle').addEventListener('click', () => {
+    const panel = document.getElementById('cartPanel');
+    if (panel.classList.contains('open')) closeCart(); else openCart();
+  });
+
+  function animateCartBtn() {
+    const btn = document.getElementById('cartToggle');
+    btn.classList.add('bounce');
+    setTimeout(() => btn.classList.remove('bounce'), 500);
+  }
+
+  function scrollToPago() {
+    closeCart();
+    document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // ── Contacto ──────────────────────────────
+  function enviarConsulta(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('cf-nombre').value;
+    const doc = document.getElementById('cf-doc').value;
+    const email = document.getElementById('cf-email').value;
+    const tel = document.getElementById('cf-telefono').value;
+    const dir = document.getElementById('cf-direccion').value;
+    const msg = document.getElementById('cf-mensaje').value;
+
+    // Armar resumen del carrito para el cuerpo del email
+    let resumenCarrito = carrito.length > 0
+      ? carrito.map(i => `• ${i.nombre} (${i.opcion}) — ${(i.precio * i.qty).toFixed(2)} €`).join('%0A')
+      : 'Sin productos en el carrito';
+
+    const total = carrito.reduce((s, i) => s + i.precio * i.qty, 0);
+    const deposito = (total / 2).toFixed(2);
+
+    const subject = encodeURIComponent(`Consulta Digital Home – ${nombre}`);
+    const body = encodeURIComponent(
+      `Nombre: ${nombre}\nDocumento: ${doc}\nEmail: ${email}\nTeléfono: ${tel}\nDirección: ${dir}\n\n` +
+      `--- PEDIDO ---\n${carrito.map(i => `• ${i.nombre} (${i.opcion}) — ${(i.precio * i.qty).toFixed(2)} €`).join('\n')}\n` +
+      `Total: ${total.toFixed(2)} €  |  Señal (50%): ${deposito} €\n\n` +
+      `--- MENSAJE ---\n${msg}`
+    );
+
+    window.location.href = `mailto:acunacaritho@gmail.com?subject=${subject}&body=${body}`;
+
+    document.getElementById('formSuccess').style.display = 'block';
+    document.getElementById('contactForm').reset();
+    setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 6000);
+  }
+
+  // ── Splash screen ─────────────────────────
+  window.addEventListener('load', () => {
+    const bar = document.getElementById('splashBar');
+    bar.style.width = '100%';
+    setTimeout(() => {
+      const splash = document.getElementById('splash');
+      splash.style.opacity = '0';
+      setTimeout(() => splash.style.display = 'none', 500);
+    }, 2200);
+  });
+</script>
+
+</body>
+</html>
